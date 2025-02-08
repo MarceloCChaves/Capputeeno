@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import BackButton from "../components/backButton";
 import Header from "../components/header";
-import { Container, LeftColumn, RightColumn, TotalContainer, CheckoutButton, AdditionalInfo } from "./styles";
+import { Container, LeftColumn, RightColumn } from "./styles";
 import CartProduct from "../components/cartProduct";
+import TotalCard from "../components/totalCard";
 
 const Carrinho = () => {
   const [productCart, setProductCart] = useState<Product[]>([]);
@@ -48,20 +49,10 @@ const Carrinho = () => {
         </LeftColumn>
         {productCart.length > 0 ? (
           <RightColumn>
-            <TotalContainer>
-              <h2>Resumo do Pedido</h2>
-              <p>Subtotal: R$ {(total).toFixed(2)}</p>
-              <p>Entrega: R$ {shipping.toFixed(2)}</p>
-              <hr />
-              <p><strong>Total: R$ {((total) + shipping).toFixed(2)}</strong></p>
-              <CheckoutButton>Finalizar Compra</CheckoutButton>
-            </TotalContainer>
-            <AdditionalInfo>
-              <h4>AJUDA</h4>
-              <h4>REEMBOLSOS</h4>
-              <h4>ENTREGAS E FRETE</h4>
-              <h4>TROCAS E DEVOLUÇÕES</h4>
-            </AdditionalInfo>
+            <TotalCard
+              total={total}
+              shipping={shipping}
+            />
           </RightColumn>
         ) : (
           <></>
