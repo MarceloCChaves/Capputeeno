@@ -27,10 +27,12 @@ cd capputeeno
 ### 2️⃣ Instalar as Dependências
 - Frontend
 ```bash
+ cd Frontend
  npm install
 ```
 - Api
 ```bash
+ cd api
  yarn install
 ```
 
