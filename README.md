@@ -1,5 +1,7 @@
 # Capputeeno - Teste Técnico Resolve Energia Solar
 
+<img src="./Frontend/public/Menu.png" alt="Banner" />
+
 Este repositório contém a implementação do teste técnico para a Resolve Energia Solar. O desafio consistia na construção de um e-commerce chamado **Capputeeno**, com as seguintes funcionalidades:
 
 - Catálogo de produtos com paginação
