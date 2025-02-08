@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch, FaShoppingBag, FaBars, FaTimes } from "react-icons/fa";
 import {
   Container,
@@ -17,9 +17,14 @@ import {
 } from "./styles";
 
 const Header = () => {
+  const [productCart, setProductCart] = useState<Product[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+  
+    useEffect(() => {
+      setProductCart(storedCart);
+    }, []);
 
   return (
     <Container>
@@ -41,7 +46,7 @@ const Header = () => {
           <Link href="/carrinho">
             <FaShoppingBag size={20} />
           </Link>
-          <span>{storedCart.length}</span>
+          <span>{productCart.length}</span>
         </CartIcon>
       </RightContent>
 
@@ -68,7 +73,7 @@ const Header = () => {
           <Link href="/carrinho">
             <FaShoppingBag size={20} />
           </Link>
-          <span>{storedCart.length}</span>
+          <span>{productCart.length}</span>
         </CartIcon>
       </MobileMenu>
     </Container>
