@@ -20,7 +20,7 @@ O projeto consome uma **Fake API em GraphQL**.
 
 ### 1️⃣ Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/capputeeno.git
+git clone https://github.com/MarceloCChaves/Capputeeno.git
 cd Capputeeno
 ```
 
