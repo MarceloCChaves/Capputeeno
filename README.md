@@ -1,4 +1,4 @@
-# Capputeeno - Teste Técnico Resolve Energia Solar
+# ☕ Capputeeno - Teste Técnico Resolve Energia Solar
 
 <img src="./Frontend/public/Menu.png" alt="Banner" />
 
